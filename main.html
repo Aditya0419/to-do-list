@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Welcome to ToDus - Your Personal Task Manager!</h1>
+    <form>
+        <label for="taskInput">Write your task here: </label>
+        <input type="text" id="taskInput">
+        
+        <br>
+        <br>
+        <label for="time">Add time duration for task: </label>
+        <input type="time" name="time1" id="time" class="time1" default="09:30 AM">
+        --
+        <input type="time" name="time2" id="time" class="time2" default="09:30 AM">
+        <br>
+        <br>
+        <input type="date" name="date" id="date">
+        <br>
+        <br>
+        <button id="add">Add</button>
+    </form>
+    <br>
+    <br>
+    <table id="taskList" border="black">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>date</th>
+                <th>task</th>
+                <th>start time</th>
+                <th>end time</th>
+                <th>completion</th>
+                <!-- <th>remarks</th> -->
+            </tr>
+        </thead>
+        
+    </table>
+    <script src="index.js"></script>
+</body>
+</html>
