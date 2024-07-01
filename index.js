@@ -10,7 +10,7 @@ add.addEventListener("click", function addList(event) {
     let table = document.querySelector("#taskList");
     let newTask = document.createElement("tr");
     let color = randomColor();
-    newTask.innerHTML = `<td>${num}</td><td>${date.value}</td><td>${task.value}</td><td>${time1.value}</td><td>${time2.value}</td><td><input type="checkbox" name="completion" id="completion"></td>`;
+    newTask.innerHTML = `<td>${num}</td><td>${date.value}</td><td>${task.value}</td><td>${time1.value}</td><td>${time2.value}</td><td><input type="checkbox" name="completion" id="completion"></td><td><button class="deletebutton">delete</button></td>`;
     newTask.style.backgroundColor=color;
     table.append(newTask);
     num += 1;
@@ -18,7 +18,24 @@ add.addEventListener("click", function addList(event) {
     task.value="";
     time1.value="";
     time2.value=""; 
+    removeTask(newTask);   
 });
+
+function removeTask(newTask){
+    const deletebutton=newTask.getElementsByClassName("deletebutton")[0];
+    // console.log(deletebutton[0]);
+    
+        deletebutton.addEventListener('click',(event)=>{
+            console.log('a')
+            event.preventDefault();
+            let parent = event.target.parentElement.parentElement;
+            parent.style.display='none';
+
+        });
+    }
+
+
+
 
 function randomColor() {
     let red = Math.floor(Math.random() * 255);
